@@ -1,47 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   id="svg1431"
-   width="256"
-   height="256"
-   version="1.1"
-   viewBox="0 0 256.00001 256.00001"
-   sodipodi:docname="index.svg"
-   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04, custom)"
-   inkscape:export-filename="C:\Users\Dell\Documents\GitHub\aerodice\src\images\shorticons\index.png"
-   inkscape:export-xdpi="72"
-   inkscape:export-ydpi="72"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <defs
-     id="defs8" />
-  <sodipodi:namedview
-     id="namedview6"
-     pagecolor="#505050"
-     bordercolor="#ffffff"
-     borderopacity="1"
-     inkscape:pageshadow="0"
-     inkscape:pageopacity="0"
-     inkscape:pagecheckerboard="1"
-     showgrid="false"
-     inkscape:zoom="3.0609617"
-     inkscape:cx="86.084057"
-     inkscape:cy="118.10014"
-     inkscape:window-width="1920"
-     inkscape:window-height="1002"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg1431" />
-  <circle
-     style="fill:#f5f5f5;stroke:#ffffff;stroke-width:0;fill-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
-     id="path843"
-     cx="128"
-     cy="127.99999"
-     r="116.40991" />
-  <path
-     style="fill:#ca8a04;stroke-width:1.33333;fill-opacity:1"
-     d="m 128.24623,191.70155 -20.30315,0.36821 -0.63821,-2.03488 C 106.95386,188.91569 106.3855,187.1 106.04185,186 l -0.62482,-2 h -4.04185 -4.041847 v -2 -2 h 2.592315 c 1.425772,0 4.069002,-1.35 5.873832,-3 l 3.28152,-3 0.86088,-52.1136 0.86088,-52.1136 -2.05337,-1.704143 c -1.12935,-0.937277 -1.72456,-2.236158 -1.32269,-2.8864 L 108.15738,64 h 21.03242 c 11.56783,0 21.45945,0.427031 21.98137,0.948956 0.52194,0.521925 -0.3065,1.895955 -1.84096,3.053397 l -2.78992,2.10444 0.93939,52.206947 c 0.51667,28.71382 1.35508,52.87955 1.86315,53.70162 0.50806,0.82207 2.98972,2.20491 5.51478,3.07299 2.52507,0.86808 4.73495,2.17832 4.91087,2.91165 0.17591,0.73333 -1.92565,1.63333 -4.67015,2 l -4.98998,0.66667 -0.77948,3.33333 -0.77948,3.33333 z"
-     id="path3381" />
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="svg1431" width="256" height="256" version="1.1" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+ <circle id="path843" cx="128" cy="128" r="116.41" fill="#f5f5f5" stroke-width="0"/>
+ <path id="path3381" d="m128.25 191.7-20.303 0.36821-0.63821-2.0349c-0.35101-1.1192-0.91937-2.9349-1.263-4.0349l-0.62482-2h-8.0837v-4h2.5923c1.4258 0 4.069-1.35 5.8738-3l3.2815-3 1.7218-104.23-2.0534-1.7041c-1.1294-0.93728-1.7246-2.2362-1.3227-2.8864l0.73068-1.1823h21.032c11.568 0 21.459 0.42703 21.981 0.94896 0.52194 0.52192-0.3065 1.896-1.841 3.0534l-2.7899 2.1044 0.93939 52.207c0.51667 28.714 1.3551 52.88 1.8632 53.702 0.50806 0.82207 2.9897 2.2049 5.5148 3.073 2.5251 0.86808 4.735 2.1783 4.9109 2.9116 0.17591 0.73333-1.9256 1.6333-4.6702 2l-4.99 0.66667-1.559 6.6667z" fill="#ca8a04" stroke-width="1.3333"/>
 </svg>
