@@ -1,0 +1,11 @@
+{
+	"devDependencies": {
+		"@11ty/eleventy": "^1.0.0",
+		"@squoosh/lib": "^0.4.0",
+		"eslint": "^8.14.0",
+		"html-minifier": "^4.0.0",
+		"minify": "^8.0.4",
+		"prettier": "^2.6.2",
+		"terser": "^5.13.0"
+	}
+}

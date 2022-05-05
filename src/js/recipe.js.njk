@@ -1,0 +1,94 @@
+---
+permalink: js/recipe.js
+---
+/**
+ * Entry point
+ */
+async function start() { // eslint-disable-line no-unused-vars
+	let grind_size_time = [
+		{ size: "Fine", time: 60 },
+		{ size: "Medium Fine", time: 90 },
+		{ size: "Medium", time: 120 },
+		{ size: "Medium Coarse", time: 180 },
+		{ size: "Coarse", time: 240 },
+	][getRandomInt(0, 4)]
+
+	let inverted = getRandomInt(0, 1)
+	let filter = getRandomInt(0, 1)
+	let water_temp = getRandomInt(16, 20) * 5
+	let water_mass = getRandomInt(7, inverted ? 20 : 25) * 10
+	let stir_count = getRandomInt(0, 3)
+	let bloom_water = getRandomInt(0, water_mass < 91 ? 3 : 6) * 10
+	bloom_water = bloom_water < 30 ? 0 : bloom_water
+	let brew_ratio = getRandomInt(8, 16)
+	if (water_mass < 91) {
+		brew_ratio = getRandomInt(5, 8)
+	}
+
+	let inverted_text = inverted ? "Inverted" : "Standard"
+	let coffee_mass = Math.round(water_mass / brew_ratio)
+
+	let recipe = `<p>🔀 Mode: ${inverted_text} | ⏲ Time: ${grind_size_time.time}s | ${
+		filter ? "🧻 Paper" : "🤘 Metal"
+	} Filter | ☕ Coffee: ${coffee_mass}g ${
+		grind_size_time.size
+	} | 💧 Water: ${water_temp}°C ${water_mass}g</p>
+
+<ol><li>Prepare your Aeropress in the <b>${inverted_text.toLowerCase()}</b> position.</li>
+<li>Add <b>${coffee_mass}g</b> of <b>${grind_size_time.size.toLowerCase()}</b> ground coffee.</li>
+${
+	bloom_water
+		? "<li>Blooming - add <b>" + bloom_water + "g</b> water, stir, wait until <b>30s</b>.</li>"
+		: ""
+}
+<li>Then, pour <b>${water_mass - bloom_water}g</b> water${
+		stir_count ? " and stir <b>" + stir_count + "</b> times" : ""
+	}.</li>
+<li>Wait until <b>${grind_size_time.time}s</b>.</li>
+${inverted ? "<li>Flip your AeroPress and press" : "<li>Press gently all the way"}.`
+	document.getElementById("output").innerHTML = recipe
+}
+
+/**
+ * Returns a random integer between min (inclusive) and max (exclusive)
+ * @param {int} min minimum int inclusive
+ * @param {int} max maximum int exclusive
+ * @return {int} random number
+ */
+function getRandomInt(min, max) {
+	let rand = window.crypto.getRandomValues(new Uint8Array(1)) / 256
+	return Math.round(rand * (max - min)) + min
+}
+
+/**
+ * @param {string} stringToCopy
+ * @return {void}
+ */
+async function copyToClipboard(stringToCopy) {
+	if (navigator.clipboard) {
+		try {
+			await navigator.clipboard.writeText(stringToCopy)
+		} catch (err) {
+			window.alert("Failed to Copy: " + err)
+		}
+	}
+	return
+}
+
+/**
+ * Copy the contents of the output element
+ * @return {void}
+ */
+function copy() { // eslint-disable-line no-unused-vars
+	let output = document.getElementById("output")
+	var range = document.createRange()
+	range.selectNode(output)
+	window.getSelection().removeAllRanges()
+	window.getSelection().addRange(range)
+	let output_text = output.textContent
+		.split("\n")
+		.filter((i) => i)
+		.join("\n- ")
+	copyToClipboard(output_text)
+	return
+}
