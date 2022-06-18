@@ -13,6 +13,7 @@
 Another Random Aeropress recipe generator inspired by James Hoffmann's Aeropress Dice and https://github.com/thewinniewu/aeropress-dice
 
 - [Features](#features)
+- [How to run](#how-to-run)
 - [Download Project](#download-project)
 	- [Clone](#clone)
 		- [Using The Command Line](#using-the-command-line)
@@ -65,6 +66,20 @@ Examples:
 - Then, pour 190g water.
 - Wait until 90s.
 - Flip your AeroPress and press.
+
+## How to run
+
+```sh
+$ npx @11ty/eleventy --serve
+[11ty] Copied ... files / Wrote ... files in ... seconds (v1.0.1)
+[11ty] Watching…
+[Browsersync] Access URLs:
+ -------------------------------
+    Local: http://localhost:8080
+...
+ -------------------------------
+[Browsersync] Serving files from: docs
+```
 
 ## Download Project
 

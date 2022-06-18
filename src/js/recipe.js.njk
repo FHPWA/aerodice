@@ -5,12 +5,13 @@ permalink: js/recipe.js
  * Entry point
  */
 async function start() { // eslint-disable-line no-unused-vars
+	// time_base = average number of minutes
 	let grind_size_time = [
-		{ size: "Fine", time: 60 },
-		{ size: "Medium Fine", time: 90 },
-		{ size: "Medium", time: 120 },
-		{ size: "Medium Coarse", time: 180 },
-		{ size: "Coarse", time: 240 },
+		{ size: "Fine", time_base: 1 },
+		{ size: "Medium Fine", time_base: 1.7 },
+		{ size: "Medium", time_base: 3 },
+		{ size: "Medium Coarse", time_base: 4 },
+		{ size: "Coarse", time_base: 5 },
 	][getRandomInt(0, 4)]
 
 	let inverted = getRandomInt(0, 1)
@@ -18,17 +19,21 @@ async function start() { // eslint-disable-line no-unused-vars
 	let water_temp = getRandomInt(16, 20) * 5
 	let water_mass = getRandomInt(7, inverted ? 20 : 25) * 10
 	let stir_count = getRandomInt(0, 3)
-	let bloom_water = getRandomInt(0, water_mass < 91 ? 3 : 6) * 10
+	let bloom_water = getRandomInt(0, water_mass < 101 ? 3 : 6) * 10
 	bloom_water = bloom_water < 30 ? 0 : bloom_water
-	let brew_ratio = getRandomInt(8, 16)
-	if (water_mass < 91) {
+	let brew_ratio = getRandomInt(13, 18)
+	if (water_mass < 161) {
+		brew_ratio = getRandomInt(8, 12)
+	}
+	if (water_mass < 101) {
 		brew_ratio = getRandomInt(5, 8)
 	}
+	let time = Math.round(grind_size_time.time_base * getRandomInt(5,7)) * 10
 
 	let inverted_text = inverted ? "Inverted" : "Standard"
 	let coffee_mass = Math.round(water_mass / brew_ratio)
 
-	let recipe = `<p>🔀 Mode: ${inverted_text} | ⏲ Time: ${grind_size_time.time}s | ${
+	let recipe = `<p>🔀 Mode: ${inverted_text} | ⏳ Time: ${time}s | ${
 		filter ? "🧻 Paper" : "🤘 Metal"
 	} Filter | ☕ Coffee: ${coffee_mass}g ${
 		grind_size_time.size
@@ -42,9 +47,9 @@ ${
 		: ""
 }
 <li>Then, pour <b>${water_mass - bloom_water}g</b> water${
-		stir_count ? " and stir <b>" + stir_count + "</b> times" : ""
+		stir_count ? " and stir <b>" + stir_count + "</b> time(s)" : ""
 	}.</li>
-<li>Wait until <b>${grind_size_time.time}s</b>.</li>
+<li>Wait until <b>${time}s</b>.</li>
 ${inverted ? "<li>Flip your AeroPress and press" : "<li>Press gently all the way"}.`
 	document.getElementById("output").innerHTML = recipe
 }
