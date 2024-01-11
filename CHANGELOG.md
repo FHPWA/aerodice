@@ -6,10 +6,10 @@ patch-level version changes can be found in [commit messages](../../commits/mast
 ## 2022.0.1 - 2022/06/18
 
 - fix:
-	- coffee quantity well over 20g
-	- time of coarse 5min (french press)
+  - coffee quantity well over 20g
+  - time of coarse 5min (french press)
 - feat:
-	- time range to nearest 10s
+  - time range to nearest 10s
 
 ## 2022 - 2022/05/06
 

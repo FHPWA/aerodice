@@ -1,7 +1,7 @@
 {
-	"projectName": "AeroDice",
-	"accent": "#CA8A04",
-	"accent_text": "#f5f7ff",
-	"description": "Another Random Aeropress recipe generator. Generate new and exciting recipes, use the copy button to copy recipes you like!",
-	"keywords": "Random Aeropress recipe generator"
+  "projectName": "AeroDice",
+  "accent": "#CA8A04",
+  "accent_text": "#f5f7ff",
+  "description": "Another Random Aeropress recipe generator. Generate new and exciting recipes, use the copy button to copy recipes you like!",
+  "keywords": "Random Aeropress recipe generator"
 }
